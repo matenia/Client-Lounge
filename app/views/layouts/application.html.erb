@@ -1,14 +1,55 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Clientlounge</title>
-  <%= stylesheet_link_tag :all %>
+  <title><%= yield(:title) %> Client Lounge</title>
+  <%= stylesheet_link_tag "reset","960","text","application"%>
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
+  <%= yield(:head) %>
 </head>
 <body>
+<div class="container_12" id="header">
+	<div class="grid_8">
+		<h1>ClientLounge</h1>
+	</div>
+	<div class="grid_4">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</div>
+</div>
+<div class="container_12" id="navigation">
+	<div class="grid_12">
+		<ul>
+			<li><a href="">link somewhere</a></li>
+			<li><a href="">link somewhere</a></li>
+			<li><a href="">link somewhere</a></li>
+			<li><a href="">link somewhere</a></li>
+			<li><a href="">link somewhere</a></li>
+			<li><a href="">link somewhere</a></li>
+			<li><a href="">link somewhere</a></li>
+			<li><a href="">link somewhere</a></li>
+			<li><a href="">link somewhere</a></li>
+			<li><a href="">link somewhere</a></li>
+		</ul>
+	</div>
+</div>
+<div class="container_12" id="main">
+	<% flash.each do |name, msg| %>
+    <%= content_tag :div, msg, :id => "flash_#{name}", :class => 'grid_12' %>
+  <% end %>
+	<div class="grid_12">
+  	<%= content_tag :h1, yield(:title)%>
+  </div>
+	<div class="grid_8">
+		<%= yield %>
+	</div>
+	<div class="grid_4">
+		<%= yield(:sidebar)%>
+	</div>
+</div>
+<div class="container_12" id="footer">
+	
+</div>
 
-<%= yield %>
 
 </body>
 </html>
