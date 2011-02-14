@@ -1,15 +1,16 @@
 html,body{background-color:#EEE;color:#567;}
-#header{background-color:#DDD;}
 h1{text-shadow:-1px -1px 1px #FFF;}
 a{color:#123;text-decoration:none;}
 a:hover{color:#89A;}
-
 .container_12{overflow:hidden;background-color:#FFF;border-bottom:1px solid #DDD}
-#navigation{font-size:0.9em;}
+#navigation{font-size:0.9em;background-color:#DDD;}
 #navigation ul{list-style:none;background-color:#333;}
 #navigation ul li{float:left;margin:1px;padding:0px;}
+#navigation ul li a{padding:2px 5px;display:block;float:left;}
+#navigation ul li a:hover{background-color:#333;-moz-border-radius:5px;
+-webkit-border-radius:5px;
+border-radius:5px;}
 #footer{font-size:0.8em;}
-
 .clear{clear:both;height:0;overflow:hidden;}
 #flash_notice,#flash_error,#flash_alert{padding:5px 8px;margin:10px 0;}
 #flash_notice{background-color:#CFC;border:solid 1px #6C6;}
