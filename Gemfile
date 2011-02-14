@@ -13,5 +13,5 @@ gem 'devise'
 gem 'carrierwave'
 
 group :development,:test do
-  gem 'web-app-theme', '>= 0.6.2'
+  gem 'web-app-theme'
 end

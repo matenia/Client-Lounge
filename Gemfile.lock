@@ -91,5 +91,5 @@ DEPENDENCIES
   rails (= 3.0.3)
   rmagick
   sqlite3-ruby
-  web-app-theme (>= 0.6.2)
+  web-app-theme
   will_paginate (~> 3.0.beta)

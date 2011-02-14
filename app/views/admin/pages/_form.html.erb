@@ -1,0 +1,49 @@
+<%= form_for(@admin_page) do |f| %>
+  <% if @admin_page.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@admin_page.errors.count, "error") %> prohibited this admin_page from being saved:</h2>
+
+      <ul>
+      <% @admin_page.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="group">
+    <%= f.label :title, :class =>'label' %>
+    <%= f.text_field :title, :class=>"text_field"  %>
+  </div>
+  <div class="group">
+    <%= f.label :link_text, :class =>'label' %>
+    <%= f.text_field :link_text, :class=>"text_field" %>
+  </div>
+  <div class="group">
+    <%= f.label :meta_keywords, :class=>'label' %>
+    <%= f.text_field :meta_keywords, :class=>"text_field" %>
+  </div>
+  <div class="group">
+    <%= f.label :meta_description, :class=>'label' %>
+    <%= f.text_field :meta_description, :class=>"text_field" %>
+  </div>
+  <div class="group">
+    <%= f.label :content, :class=>'label' %>
+    <%= f.text_area :content, :class=>"text_area" %>
+  </div>
+  <div class="group">
+    <%= f.check_box :active,:class =>'checkbox'  %>
+    <%= f.label :active,:class =>'checkbox' %>
+  </div>
+  <div class="group">
+    <%= f.check_box :members_only,:class =>'checkbox'  %>
+    <%= f.label :members_only,:class =>'checkbox'  %>
+  </div>
+  <div class="group">
+    <%= f.check_box :navigation,:class =>'checkbox'  %>
+    <%= f.label :navigation,:class =>'checkbox'  %>    
+  </div>
+  <div class="group navform wat-cf">
+    <%= f.submit %>
+  </div>
+<% end %>

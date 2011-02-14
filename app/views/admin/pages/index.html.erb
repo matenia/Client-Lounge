@@ -1,0 +1,39 @@
+<h1>Listing admin_pages</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Link text</th>
+    <th>Cached slug</th>
+    <th>Meta keywords</th>
+    <th>Meta description</th>
+    <th>Content</th>
+    <th>Active</th>
+    <th>Members only</th>
+    <th>Navigation</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @admin_pages.each do |admin_page| %>
+  <tr>
+    <td><%= admin_page.title %></td>
+    <td><%= admin_page.link_text %></td>
+    <td><%= admin_page.cached_slug %></td>
+    <td><%= admin_page.meta_keywords %></td>
+    <td><%= admin_page.meta_description %></td>
+    <td><%= admin_page.content %></td>
+    <td><%= admin_page.active %></td>
+    <td><%= admin_page.members_only %></td>
+    <td><%= admin_page.navigation %></td>
+    <td><%= link_to 'Show', admin_page %></td>
+    <td><%= link_to 'Edit', edit_admin_page_path(admin_page) %></td>
+    <td><%= link_to 'Destroy', admin_page, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Page', new_admin_page_path %>

@@ -1,4 +1,10 @@
 Clientlounge::Application.routes.draw do
+  namespace :admin do resources :projects end
+
+  get "dashboard/index"
+
+  namespace :admin do resources :pages end
+
   get "welcome/index"
 
   get "welcome/contact"

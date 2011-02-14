@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Web App</title>
+  <title><%= yield(:title)%></title>
   <%= stylesheet_link_tag "web-app-theme/base", "web-app-theme/themes/default/style", "web-app-theme/override"%>
   <%= csrf_meta_tag %>
 </head>

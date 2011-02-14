@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @admin_project.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @admin_project.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_admin_project_path(@admin_project) %> |
+<%= link_to 'Back', admin_projects_path %>
