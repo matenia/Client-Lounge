@@ -3,6 +3,7 @@ class WelcomeController < ApplicationController
   end
 
   def contact
+    render :layout => 'sign'
   end
 
 end
